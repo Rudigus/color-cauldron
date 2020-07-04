@@ -14,6 +14,7 @@
 		57C31ECF24AFF637003392D1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C31ECD24AFF637003392D1 /* MainMenu.xib */; };
 		57C31EDB24AFF638003392D1 /* Color_CauldronTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EDA24AFF638003392D1 /* Color_CauldronTests.swift */; };
 		57C31EE624AFF638003392D1 /* Color_CauldronUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EE524AFF638003392D1 /* Color_CauldronUITests.swift */; };
+		57C31EFC24B00BBD003392D1 /* DocumentWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EFB24B00BBD003392D1 /* DocumentWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		57C31EE124AFF638003392D1 /* Color CauldronUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Color CauldronUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C31EE524AFF638003392D1 /* Color_CauldronUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_CauldronUITests.swift; sourceTree = "<group>"; };
 		57C31EE724AFF638003392D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57C31EFB24B00BBD003392D1 /* DocumentWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				57C31ECD24AFF637003392D1 /* MainMenu.xib */,
 				57C31ED024AFF637003392D1 /* Info.plist */,
 				57C31ED124AFF637003392D1 /* Color_Cauldron.entitlements */,
+				57C31EFB24B00BBD003392D1 /* DocumentWindowController.swift */,
 			);
 			path = "Color Cauldron";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				57C31EC724AFF636003392D1 /* Document.swift in Sources */,
 				57C31EC524AFF636003392D1 /* AppDelegate.swift in Sources */,
+				57C31EFC24B00BBD003392D1 /* DocumentWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
