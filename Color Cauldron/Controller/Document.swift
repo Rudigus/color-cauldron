@@ -20,7 +20,7 @@ class Document: NSDocument {
     }
 
     override func makeWindowControllers() {
-        let windowController = DocumentWindowController(windowNibName: "Document")
+        let windowController = DocumentWindowController(window: NSWindow(contentViewController: DocumentViewController()))
         addWindowController(windowController)
     }
 

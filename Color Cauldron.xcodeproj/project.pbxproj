@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		57C31EC524AFF636003392D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EC424AFF636003392D1 /* AppDelegate.swift */; };
-		57C31EC724AFF636003392D1 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EC624AFF636003392D1 /* Document.swift */; };
-		57C31ECA24AFF636003392D1 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C31EC824AFF636003392D1 /* Document.xib */; };
 		57C31ECC24AFF637003392D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C31ECB24AFF637003392D1 /* Assets.xcassets */; };
 		57C31ECF24AFF637003392D1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C31ECD24AFF637003392D1 /* MainMenu.xib */; };
 		57C31EDB24AFF638003392D1 /* Color_CauldronTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EDA24AFF638003392D1 /* Color_CauldronTests.swift */; };
@@ -17,6 +15,9 @@
 		57C31EFC24B00BBD003392D1 /* DocumentWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EFB24B00BBD003392D1 /* DocumentWindowController.swift */; };
 		57C31EFE24B00E3E003392D1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EFD24B00E3E003392D1 /* Color.swift */; };
 		57C31F0024B00F83003392D1 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EFF24B00F83003392D1 /* Content.swift */; };
+		57C31F0524B01304003392D1 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31F0424B01304003392D1 /* Document.swift */; };
+		57C31F0724B0FCB4003392D1 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31F0624B0FCB4003392D1 /* DocumentViewController.swift */; };
+		57C31F0924B10253003392D1 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31F0824B10253003392D1 /* DocumentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,6 @@
 /* Begin PBXFileReference section */
 		57C31EC124AFF636003392D1 /* Color Cauldron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Cauldron.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C31EC424AFF636003392D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		57C31EC624AFF636003392D1 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
-		57C31EC924AFF636003392D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Document.xib; sourceTree = "<group>"; };
 		57C31ECB24AFF637003392D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57C31ECE24AFF637003392D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		57C31ED024AFF637003392D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +53,9 @@
 		57C31EFB24B00BBD003392D1 /* DocumentWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentWindowController.swift; sourceTree = "<group>"; };
 		57C31EFD24B00E3E003392D1 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		57C31EFF24B00F83003392D1 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		57C31F0424B01304003392D1 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		57C31F0624B0FCB4003392D1 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
+		57C31F0824B10253003392D1 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				57C31EC424AFF636003392D1 /* AppDelegate.swift */,
-				57C31EC624AFF636003392D1 /* Document.swift */,
+				57C31F0424B01304003392D1 /* Document.swift */,
 				57C31EFB24B00BBD003392D1 /* DocumentWindowController.swift */,
+				57C31F0624B0FCB4003392D1 /* DocumentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -154,8 +157,8 @@
 		57C31F0324B01047003392D1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				57C31EC824AFF636003392D1 /* Document.xib */,
 				57C31ECD24AFF637003392D1 /* MainMenu.xib */,
+				57C31F0824B10253003392D1 /* DocumentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,7 +268,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				57C31ECC24AFF637003392D1 /* Assets.xcassets in Resources */,
-				57C31ECA24AFF636003392D1 /* Document.xib in Resources */,
 				57C31ECF24AFF637003392D1 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,11 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57C31EC724AFF636003392D1 /* Document.swift in Sources */,
 				57C31EFE24B00E3E003392D1 /* Color.swift in Sources */,
 				57C31EC524AFF636003392D1 /* AppDelegate.swift in Sources */,
 				57C31F0024B00F83003392D1 /* Content.swift in Sources */,
+				57C31F0724B0FCB4003392D1 /* DocumentViewController.swift in Sources */,
 				57C31EFC24B00BBD003392D1 /* DocumentWindowController.swift in Sources */,
+				57C31F0524B01304003392D1 /* Document.swift in Sources */,
+				57C31F0924B10253003392D1 /* DocumentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,14 +335,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		57C31EC824AFF636003392D1 /* Document.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				57C31EC924AFF636003392D1 /* Base */,
-			);
-			name = Document.xib;
-			sourceTree = "<group>";
-		};
 		57C31ECD24AFF637003392D1 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
