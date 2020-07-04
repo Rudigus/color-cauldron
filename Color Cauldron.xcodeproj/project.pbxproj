@@ -15,6 +15,8 @@
 		57C31EDB24AFF638003392D1 /* Color_CauldronTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EDA24AFF638003392D1 /* Color_CauldronTests.swift */; };
 		57C31EE624AFF638003392D1 /* Color_CauldronUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EE524AFF638003392D1 /* Color_CauldronUITests.swift */; };
 		57C31EFC24B00BBD003392D1 /* DocumentWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EFB24B00BBD003392D1 /* DocumentWindowController.swift */; };
+		57C31EFE24B00E3E003392D1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EFD24B00E3E003392D1 /* Color.swift */; };
+		57C31F0024B00F83003392D1 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EFF24B00F83003392D1 /* Content.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		57C31EE524AFF638003392D1 /* Color_CauldronUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_CauldronUITests.swift; sourceTree = "<group>"; };
 		57C31EE724AFF638003392D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57C31EFB24B00BBD003392D1 /* DocumentWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentWindowController.swift; sourceTree = "<group>"; };
+		57C31EFD24B00E3E003392D1 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		57C31EFF24B00F83003392D1 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,14 +104,12 @@
 		57C31EC324AFF636003392D1 /* Color Cauldron */ = {
 			isa = PBXGroup;
 			children = (
-				57C31EC424AFF636003392D1 /* AppDelegate.swift */,
-				57C31EC624AFF636003392D1 /* Document.swift */,
-				57C31EC824AFF636003392D1 /* Document.xib */,
+				57C31F0324B01047003392D1 /* View */,
+				57C31F0224B0101F003392D1 /* Controller */,
+				57C31F0124B0100E003392D1 /* Model */,
 				57C31ECB24AFF637003392D1 /* Assets.xcassets */,
-				57C31ECD24AFF637003392D1 /* MainMenu.xib */,
 				57C31ED024AFF637003392D1 /* Info.plist */,
 				57C31ED124AFF637003392D1 /* Color_Cauldron.entitlements */,
-				57C31EFB24B00BBD003392D1 /* DocumentWindowController.swift */,
 			);
 			path = "Color Cauldron";
 			sourceTree = "<group>";
@@ -128,6 +130,34 @@
 				57C31EE724AFF638003392D1 /* Info.plist */,
 			);
 			path = "Color CauldronUITests";
+			sourceTree = "<group>";
+		};
+		57C31F0124B0100E003392D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				57C31EFD24B00E3E003392D1 /* Color.swift */,
+				57C31EFF24B00F83003392D1 /* Content.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		57C31F0224B0101F003392D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				57C31EC424AFF636003392D1 /* AppDelegate.swift */,
+				57C31EC624AFF636003392D1 /* Document.swift */,
+				57C31EFB24B00BBD003392D1 /* DocumentWindowController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		57C31F0324B01047003392D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				57C31EC824AFF636003392D1 /* Document.xib */,
+				57C31ECD24AFF637003392D1 /* MainMenu.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				57C31EC724AFF636003392D1 /* Document.swift in Sources */,
+				57C31EFE24B00E3E003392D1 /* Color.swift in Sources */,
 				57C31EC524AFF636003392D1 /* AppDelegate.swift in Sources */,
+				57C31F0024B00F83003392D1 /* Content.swift in Sources */,
 				57C31EFC24B00BBD003392D1 /* DocumentWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
