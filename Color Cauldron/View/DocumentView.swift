@@ -10,11 +10,11 @@ import Cocoa
 
 class DocumentView: NSView {
     
-    lazy var colorView: NSView = {
-        let colorView = NSView()
-        colorView.wantsLayer = true
-        colorView.layer?.backgroundColor = NSColor.red.cgColor
-        return colorView
+    lazy var colorCircle: TaggedView = {
+        let view = TaggedView(tag: 0)
+        view.wantsLayer = true
+        view.layer?.backgroundColor = NSColor.white.cgColor
+        return view
     }()
     
     override init(frame frameRect: NSRect) {
@@ -27,23 +27,23 @@ class DocumentView: NSView {
     }
     
     func setupView() {
-        wantsLayer = true
-        layer?.backgroundColor = NSColor.windowBackgroundColor.cgColor
-        addSubview(colorView)
+//        wantsLayer = true
+//        layer?.backgroundColor = NSColor.windowBackgroundColor.cgColor
+        addSubview(colorCircle)
         setupLayout()
     }
     
     func setupLayout() {
-        colorView.translatesAutoresizingMaskIntoConstraints = false
+        colorCircle.translatesAutoresizingMaskIntoConstraints = false
         let circleRadius = NSScreen.main!.frame.size.width * 0.05
         NSLayoutConstraint.activate([
-            colorView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            colorView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            colorView.widthAnchor.constraint(equalToConstant: circleRadius * 2),
-            colorView.heightAnchor.constraint(equalToConstant: circleRadius * 2)
+            colorCircle.centerXAnchor.constraint(equalTo: centerXAnchor),
+            colorCircle.centerYAnchor.constraint(equalTo: centerYAnchor),
+            colorCircle.widthAnchor.constraint(equalToConstant: circleRadius * 2),
+            colorCircle.heightAnchor.constraint(equalToConstant: circleRadius * 2)
         ])
-        colorView.layoutSubtreeIfNeeded()
-        colorView.layer?.cornerRadius = colorView.frame.size.width / 2
+        colorCircle.layoutSubtreeIfNeeded()
+        colorCircle.layer?.cornerRadius = colorCircle.frame.size.width / 2
     }
     
 }

@@ -20,8 +20,10 @@ class Document: NSDocument {
     }
 
     override func makeWindowControllers() {
-        let windowController = DocumentWindowController(window: NSWindow(contentViewController: DocumentViewController()))
-        addWindowController(windowController)
+        let documentWindow = NSWindow(contentViewController: DocumentViewController())
+        documentWindow.tabbingMode = .preferred
+        let documentWindowController = DocumentWindowController(window: documentWindow)
+        addWindowController(documentWindowController)
     }
 
     override func data(ofType typeName: String) throws -> Data {
