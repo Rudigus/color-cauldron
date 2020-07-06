@@ -39,7 +39,11 @@ class Document: NSDocument {
     }
 
     override func read(from data: Data, ofType typeName: String) throws {
-        try? self.content.read(from: data)
+        do {
+            try self.content.read(from: data)
+        } catch {
+            throw error
+        }
     }
 
 
