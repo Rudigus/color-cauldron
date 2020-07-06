@@ -25,8 +25,8 @@ struct Color: Codable {
         self.init(r: 255, g: 255, b: 255, a: 255)
     }
     
-    init(color: CGColor) {
-        switch color.colorSpace?.model {
+    init(cgColor: CGColor) {
+        switch cgColor.colorSpace?.model {
         case .rgb:
             self.model = .rgb
         case .cmyk:
@@ -36,6 +36,6 @@ struct Color: Codable {
         default:
             self.model = .unknown
         }
-        self.components = color.components!.map { UInt8($0 * 255) }
+        self.components = cgColor.components!.map { UInt8($0 * 255) }
     }
 }

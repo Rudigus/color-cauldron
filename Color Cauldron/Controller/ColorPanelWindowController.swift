@@ -29,8 +29,8 @@ class ColorPanelWindowController: NSWindowController {
     }
     
     @objc func didChangeColor(_ colorPanel: NSColorPanel) {
-        (NSApplication.shared.mainWindow?.windowController?.document as? Document)?.content.contentColor = Color(color: colorPanel.color.cgColor)
-        print((NSApplication.shared.mainWindow!.windowController!.document as? Document)!.content.contentColor)
+        (NSApplication.shared.mainWindow?.windowController?.document as? Document)?.content.contentColor = Color(cgColor: colorPanel.color.cgColor)
+        //print((NSApplication.shared.mainWindow!.windowController!.document as? Document)!.content.contentColor)
     }
 
 }
