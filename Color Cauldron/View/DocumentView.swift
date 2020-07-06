@@ -10,7 +10,7 @@ import Cocoa
 
 class DocumentView: NSView {
     
-    lazy var colorCircle: TaggedView = {
+    @objc dynamic lazy var colorCircle: TaggedView = {
         let view = TaggedView(tag: 0)
         view.wantsLayer = true
         view.layer?.backgroundColor = NSColor.white.cgColor

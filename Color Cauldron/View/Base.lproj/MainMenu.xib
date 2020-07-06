@@ -13,7 +13,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Color_Cauldron" customModuleProvider="target"/>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6" customClass="MainMenuController" customModule="Color_Cauldron" customModuleProvider="target">
             <items>
                 <menuItem title="Color Cauldron" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -654,7 +654,7 @@
                             <menuItem title="Color Panel" keyEquivalent="0" id="A0N-aX-EBA">
                                 <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
                                 <connections>
-                                    <action selector="performMiniaturize:" target="-1" id="Vlp-jf-awa"/>
+                                    <action selector="openColorPanel:" target="-1" id="wH9-MY-ctU"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="dMH-6s-FIZ"/>

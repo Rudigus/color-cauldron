@@ -20,4 +20,8 @@ struct Color: Codable {
         self.blue = blue
         self.alpha = alpha
     }
+
+    init() {
+        self.init(r: 255, g: 255, b: 255, a: 255)
+    }
 }

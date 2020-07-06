@@ -11,16 +11,25 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    var colorPanelWindowController: ColorPanelWindowController!
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        colorPanelWindowController = ColorPanelWindowController(windowNibName: "")
+        colorPanelWindowController.window?.orderFront(nil)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
+    
+    @objc func openColorPanel(_ sender: Any) {
+        if colorPanelWindowController.window!.isVisible {
+            colorPanelWindowController.window?.close()
+        } else {
+            colorPanelWindowController.window?.makeKeyAndOrderFront(nil)
+        }
+    }
 
 }
 

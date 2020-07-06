@@ -9,6 +9,8 @@
 import Cocoa
 
 class Document: NSDocument {
+    
+    @objc var content = Content(contentColor: Color())
 
     override init() {
         super.init()
@@ -24,6 +26,8 @@ class Document: NSDocument {
         documentWindow.tabbingMode = .preferred
         let documentWindowController = DocumentWindowController(window: documentWindow)
         addWindowController(documentWindowController)
+        
+        documentWindowController.contentViewController?.representedObject = self.content
     }
 
     override func data(ofType typeName: String) throws -> Data {
@@ -33,10 +37,13 @@ class Document: NSDocument {
     }
 
     override func read(from data: Data, ofType typeName: String) throws {
+        
+        content = Content(contentColor: Color(r: 0, g: 0, b: 0, a: 255))
+        
         // Insert code here to read your document from the given data of the specified type, throwing an error in case of failure.
         // Alternatively, you could remove this method and override read(from:ofType:) instead.
         // If you do, you should also override isEntireFileLoaded to return false if the contents are lazily loaded.
-        throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+        //throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
     }
 
 

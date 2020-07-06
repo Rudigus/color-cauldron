@@ -12,10 +12,12 @@ class DocumentViewController: NSViewController {
     
     override func loadView() {
         self.view = DocumentView(frame: NSRect(x: 0, y: 0, width: 200, height: 200))
+//        (view as! DocumentView).colorCircle.bind(NSBindingName.value, to: self, withKeyPath: "representedObject.contentColor", options: [:])
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //(view as! DocumentView).colorCircle.layer!.backgroundColor.
         // Do view setup here.
     }
     
@@ -24,18 +26,9 @@ class DocumentViewController: NSViewController {
             let hitView = view.hitTest(event.locationInWindow)
             // ColorCircle
             if hitView?.tag == 0 {
-                let colorPanel = NSColorPanel()
-                colorPanel.setTarget(self)
-                colorPanel.setAction(#selector(didChangeColor(_:)))
-                let windowController = NSWindowController(window: colorPanel)
-                windowController.showWindow(nil)
+                (NSApplication.shared.delegate as! AppDelegate).colorPanelWindowController.window?.makeKeyAndOrderFront(nil)
             }
         }
-    }
-    
-    @objc func didChangeColor(_ colorPanel: NSColorPanel) {
-        // This is temporary. The right thing to do would first update the model, then propagate the changes to the view
-        (view as! DocumentView).colorCircle.layer?.backgroundColor = colorPanel.color.cgColor
     }
     
 //    override func viewDidAppear() {

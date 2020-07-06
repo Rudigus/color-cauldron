@@ -19,6 +19,7 @@
 		57C31F0724B0FCB4003392D1 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31F0624B0FCB4003392D1 /* DocumentViewController.swift */; };
 		57C31F0924B10253003392D1 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31F0824B10253003392D1 /* DocumentView.swift */; };
 		57C31F0D24B18BDD003392D1 /* IdentifiedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31F0C24B18BDD003392D1 /* IdentifiedView.swift */; };
+		57C31F1124B27AB0003392D1 /* ColorPanelWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31F1024B27AB0003392D1 /* ColorPanelWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		57C31F0624B0FCB4003392D1 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
 		57C31F0824B10253003392D1 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
 		57C31F0C24B18BDD003392D1 /* IdentifiedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiedView.swift; sourceTree = "<group>"; };
+		57C31F1024B27AB0003392D1 /* ColorPanelWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPanelWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				57C31F0424B01304003392D1 /* Document.swift */,
 				57C31EFB24B00BBD003392D1 /* DocumentWindowController.swift */,
 				57C31F0624B0FCB4003392D1 /* DocumentViewController.swift */,
+				57C31F1024B27AB0003392D1 /* ColorPanelWindowController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				57C31F0524B01304003392D1 /* Document.swift in Sources */,
 				57C31F0924B10253003392D1 /* DocumentView.swift in Sources */,
 				57C31F0D24B18BDD003392D1 /* IdentifiedView.swift in Sources */,
+				57C31F1124B27AB0003392D1 /* ColorPanelWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
