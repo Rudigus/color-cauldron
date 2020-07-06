@@ -29,9 +29,8 @@ class ColorPanelWindowController: NSWindowController {
     }
     
     @objc func didChangeColor(_ colorPanel: NSColorPanel) {
-        // This is temporary. The right thing to do would first update the model, then propagate the changes to the view
-        //print("Color changed")
-        //(view as! DocumentView).colorCircle.layer?.backgroundColor = colorPanel.color.cgColor
+        (NSApplication.shared.mainWindow?.windowController?.document as? Document)?.content.contentColor = Color(color: colorPanel.color.cgColor)
+        print((NSApplication.shared.mainWindow!.windowController!.document as? Document)!.content.contentColor)
     }
 
 }

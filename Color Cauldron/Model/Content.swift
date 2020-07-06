@@ -9,7 +9,7 @@
 import Cocoa
 
 class Content: NSObject {
-    let contentColor: Color
+    var contentColor: Color
     
     public init(contentColor: Color) {
         self.contentColor = contentColor
