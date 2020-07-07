@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5722D2B724B42169005DCBFA /* NotificationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722D2B624B42169005DCBFA /* NotificationAPI.swift */; };
 		57C31EC524AFF636003392D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C31EC424AFF636003392D1 /* AppDelegate.swift */; };
 		57C31ECC24AFF637003392D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C31ECB24AFF637003392D1 /* Assets.xcassets */; };
 		57C31ECF24AFF637003392D1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C31ECD24AFF637003392D1 /* MainMenu.xib */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5722D2B624B42169005DCBFA /* NotificationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAPI.swift; sourceTree = "<group>"; };
 		57C31EC124AFF636003392D1 /* Color Cauldron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Cauldron.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C31EC424AFF636003392D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57C31ECB24AFF637003392D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5722D2B524B4211C005DCBFA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5722D2B624B42169005DCBFA /* NotificationAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		57C31EB824AFF636003392D1 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 				57C31F0324B01047003392D1 /* View */,
 				57C31F0224B0101F003392D1 /* Controller */,
 				57C31F0124B0100E003392D1 /* Model */,
+				5722D2B524B4211C005DCBFA /* API */,
 				57C31ECB24AFF637003392D1 /* Assets.xcassets */,
 				57C31ED024AFF637003392D1 /* Info.plist */,
 				57C31ED124AFF637003392D1 /* Color_Cauldron.entitlements */,
@@ -306,6 +317,7 @@
 				57C31EFC24B00BBD003392D1 /* DocumentWindowController.swift in Sources */,
 				57C31F0524B01304003392D1 /* Document.swift in Sources */,
 				57C31F0924B10253003392D1 /* DocumentView.swift in Sources */,
+				5722D2B724B42169005DCBFA /* NotificationAPI.swift in Sources */,
 				57C31F0D24B18BDD003392D1 /* IdentifiedView.swift in Sources */,
 				57C31F1124B27AB0003392D1 /* ColorPanelWindowController.swift in Sources */,
 			);

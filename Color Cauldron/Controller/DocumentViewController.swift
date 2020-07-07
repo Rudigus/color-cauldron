@@ -11,14 +11,12 @@ import Cocoa
 class DocumentViewController: NSViewController {
     
     override func loadView() {
-        self.view = DocumentView(frame: NSRect(x: 0, y: 0, width: 200, height: 200))
-//        (view as! DocumentView).colorCircle.bind(NSBindingName.value, to: self, withKeyPath: "representedObject.contentColor", options: [:])
+        self.view = DocumentView(frame: NSRect(x: 0, y: 0, width: 400, height: 400))
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //(view as! DocumentView).colorCircle.layer!.backgroundColor.
-        // Do view setup here.
+        NotificationCenter.default.addObserver(self, selector: #selector(updateBackgroundColor(_:)), name: .shouldUpdateBackgroundColor, object: nil)
     }
     
     override func mouseDown(with event: NSEvent) {
@@ -31,10 +29,12 @@ class DocumentViewController: NSViewController {
         }
     }
     
-//    override func viewDidAppear() {
-//        print(view.window)
-//        print(view.window?.frame)
-//        print(view.window?.windowController)
-//    }
+    @objc func updateBackgroundColor(_ notification: NSNotification) {
+        //if NSApplication.shared.mainWindow == view.window {
+            let color = (notification.object as! Content).contentColor
+            (view as! DocumentView).colorCircle.layer?.backgroundColor = CGColor(red: CGFloat(color.components[0]) / 255, green: CGFloat(color.components[1]) / 255, blue: CGFloat(color.components[2]) / 255, alpha: CGFloat(color.components[3]) / 255)
+        //}
+        NotificationCenter.default.removeObserver(self)
+    }
     
 }
