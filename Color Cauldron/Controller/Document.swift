@@ -24,7 +24,7 @@ class Document: NSDocument {
     override func makeWindowControllers() {
         let documentWindow = NSWindow(contentViewController: DocumentViewController())
         //MARK: Notification Post
-        NotificationCenter.default.post(name: .shouldUpdateBackgroundColor, object: content)
+        NotificationCenter.default.post(name: .shouldInitializeBackgroundColor, object: content)
         documentWindow.tabbingMode = .preferred
         let documentWindowController = DocumentWindowController(window: documentWindow)
         addWindowController(documentWindowController)

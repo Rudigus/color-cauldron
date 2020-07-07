@@ -10,6 +10,11 @@ import Foundation
 
 extension NSNotification.Name {
     
+    /// This notification is sent when the color circle's background color should be initialized.
+    static var shouldInitializeBackgroundColor: NSNotification.Name {
+        return .init("shouldInitializeBackgroundColor")
+    }
+    
     /// This notification is sent when the color circle's background color should be updated.
     static var shouldUpdateBackgroundColor: NSNotification.Name {
         return .init("shouldUpdateBackgroundColor")

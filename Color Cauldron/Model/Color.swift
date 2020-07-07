@@ -38,4 +38,19 @@ struct Color: Codable {
         }
         self.components = cgColor.components!.map { UInt8($0 * 255) }
     }
+    
+    func toCGColor() -> CGColor? {
+        var cgColor: CGColor?
+        switch model {
+        case .rgb:
+            cgColor = CGColor(red: CGFloat(components[0]) / 255, green: CGFloat(components[1]) / 255, blue: CGFloat(components[2]) / 255, alpha: CGFloat(components[3]) / 255)
+        case .cmyk:
+            cgColor = CGColor(genericCMYKCyan: CGFloat(components[0]) / 255, magenta: CGFloat(components[1]) / 255, yellow: CGFloat(components[2]) / 255, black: CGFloat(components[3]) / 255, alpha: CGFloat(components[4]) / 255)
+        case .monochrome:
+            cgColor = CGColor(gray: CGFloat(components[0]) / 255, alpha: CGFloat(components[1]) / 255)
+        case .unknown:
+            cgColor = nil
+        }
+        return cgColor
+    }
 }

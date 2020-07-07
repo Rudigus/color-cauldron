@@ -32,7 +32,7 @@ class ColorPanelWindowController: NSWindowController {
         let content = (NSApplication.shared.mainWindow!.windowController!.document as! Document).content
         content.contentColor = Color(cgColor: colorPanel.color.cgColor)
         //MARK: Notification Post
-        //NotificationCenter.default.post(name: .shouldUpdateBackgroundColor, object: content)
+        NotificationCenter.default.post(name: .shouldUpdateBackgroundColor, object: content)
         //print((NSApplication.shared.mainWindow!.windowController!.document as? Document)!.content.contentColor)
     }
 

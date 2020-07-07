@@ -13,9 +13,10 @@ class DocumentViewController: NSViewController {
     override func loadView() {
         self.view = DocumentView(frame: NSRect(x: 0, y: 0, width: 400, height: 400))
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateBackgroundColor(_:)), name: .shouldInitializeBackgroundColor, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateBackgroundColor(_:)), name: .shouldUpdateBackgroundColor, object: nil)
     }
     
@@ -30,11 +31,21 @@ class DocumentViewController: NSViewController {
     }
     
     @objc func updateBackgroundColor(_ notification: NSNotification) {
-        //if NSApplication.shared.mainWindow == view.window {
+        
+        switch notification.name {
+        case .shouldInitializeBackgroundColor:
             let color = (notification.object as! Content).contentColor
-            (view as! DocumentView).colorCircle.layer?.backgroundColor = CGColor(red: CGFloat(color.components[0]) / 255, green: CGFloat(color.components[1]) / 255, blue: CGFloat(color.components[2]) / 255, alpha: CGFloat(color.components[3]) / 255)
-        //}
-        NotificationCenter.default.removeObserver(self)
+            (view as! DocumentView).colorCircle.layer?.backgroundColor = color.toCGColor()!
+            NotificationCenter.default.removeObserver(self, name: .shouldInitializeBackgroundColor, object: nil)
+        case .shouldUpdateBackgroundColor:
+            if NSApplication.shared.mainWindow == view.window {
+                let color = (notification.object as! Content).contentColor
+                (view as! DocumentView).colorCircle.layer?.backgroundColor = color.toCGColor()!
+            }
+        default:
+            break
+        }
+        
     }
     
 }
